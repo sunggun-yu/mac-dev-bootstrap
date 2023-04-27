@@ -11,7 +11,7 @@ endif
 
 .PHONY: install
 install: ansible-install requirements
-	@$(ACTIVATE_VENV) && $(ANSIBLE_PLAYBOOK) $(INVENTORY) playbook.yml --ask-become-pass $(TAGS)
+	@$(ACTIVATE_VENV) && $(ANSIBLE_PLAYBOOK) $(INVENTORY) main.yml --ask-become-pass $(TAGS)
 
 .PHONY: requirements
 requirements: ansible-install

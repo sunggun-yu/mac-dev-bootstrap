@@ -52,6 +52,7 @@ setup and package installation.
 
 - `brew`: Hombrew package. `brew install [package]`
 - `cask`: Homebrew Cask package. `brew install --cask [package]`
+- `mas`: Mac App Store with `mas` cli. `mas install <app_id>`
 - `npm`: NPM package. `npm install --global [package]`
 - `pip`: PIP package. `pip3 install [package]`
 
@@ -71,7 +72,7 @@ setup and package installation.
 │   │               #  example for team specific package list
 │   └── template    # template of package variable files
 │                   #  you can make your own package with this
-└── playbook.yml
+└── main.yml        #  main Ansible playbook
 ```
 
 ### goals file
@@ -164,6 +165,7 @@ Global Tags: same as [Supported Package managers](#supported-package-managers)
 
 - `brew`
 - `cask`
+- `mas`
 - `npm`
 - `pip`
 
