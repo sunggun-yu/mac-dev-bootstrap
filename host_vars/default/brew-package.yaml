@@ -15,5 +15,6 @@ homebrew_installed_packages:
   - watch # Executes a program periodically, showing output fullscreen, https://gitlab.com/procps-ng/procps
   - tree # Display directories as trees, http://mama.indstate.edu/users/ice/tree/
   - colima # docker engine alternative, https://github.com/abiosoft/colima/blob/main/README.md
+  - node
 
 homebrew_uninstalled_packages: []

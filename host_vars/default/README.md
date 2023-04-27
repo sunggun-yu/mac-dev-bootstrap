@@ -21,6 +21,7 @@
 - `watch`: Executes a program periodically, showing output fullscreen, <https://gitlab.com/procps-ng/procps>
 - `tree`: Display directories as trees, <http://mama.indstate.edu/users/ice/tree/>
 - `colima`: docker engine alternative, Container runtimes on MacOS (and Linux) with minimal setup, <https://github.com/abiosoft/colima/blob/main/README.md>
+- `node`: Nodejs, <https://nodejs.org/>
 
 ### Brew Cask
 
