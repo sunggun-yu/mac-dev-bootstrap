@@ -1,0 +1,57 @@
+
+# Mac Directory #
+.DS_Store
+
+# Jetbrains IDE Project Files #
+.idea
+*.iml
+
+# vscode
+.vscode
+
+# Packer Cache directory #
+packer_cache
+
+# Build directory #
+packer/build
+
+# Ansible
+*.log
+*.retry
+
+# Vagrant
+.vagrant
+
+# Secrets
+.secrets.yml
+
+# Ansible Roles
+**/roles/*
+!**/roles/requirements.yml
+!**/roles/pip
+!**/roles/oh-my-zsh
+!**/roles/vscode
+!**/roles/npm
+!**/roles/apt
+!**/roles/gem
+!**/roles/snap
+!**/roles/gcloud-components
+
+# Terraform
+.terraform
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+*.tfvars
+terraform.tfvars
+
+# RKE
+kube_config_cluster.yml
+
+# .history
+.history
+
+collections
+
+# python venv for ansible
+.venv

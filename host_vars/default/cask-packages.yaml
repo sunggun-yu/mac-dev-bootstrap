@@ -1,0 +1,9 @@
+---
+homebrew_cask_appdir: /Applications
+
+homebrew_cask_apps:
+  - visual-studio-code # Microsoft Visual Studio Code, https://code.visualstudio.com/
+  - iterm2 # Terminal emulator as alternative to Apple's Terminal app, https://www.iterm2.com/
+  - rancher # Rancher Desktop for docker alternative, https://rancherdesktop.io/
+
+homebrew_cask_uninstalled_apps: []

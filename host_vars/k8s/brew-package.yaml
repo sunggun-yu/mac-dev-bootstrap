@@ -1,0 +1,17 @@
+---
+homebrew_taps: []
+
+homebrew_upgrade_all_packages: no
+
+homebrew_installed_packages:
+  - kubernetes-cli # Kubernetes command-line interface, https://kubernetes.io/
+  - helm # Kubernetes package manager, https://helm.sh/
+  - kind # https://kind.sigs.k8s.io/, kind is a tool for running local Kubernetes clusters using Docker container “nodes”
+  - kustomize # https://github.com/kubernetes-sigs/kustomize, Customization of kubernetes YAML configurations, required for kubebuilder
+  - istioctl # https://istio.io/latest/docs/reference/commands/istioctl
+  - argocd
+  - kubeseal
+  - dive
+  - k9s
+
+homebrew_uninstalled_packages: []

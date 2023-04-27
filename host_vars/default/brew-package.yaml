@@ -1,0 +1,19 @@
+---
+homebrew_taps: []
+
+homebrew_upgrade_all_packages: no
+
+homebrew_installed_packages:
+  - git # git, https://git-scm.com
+  - wget # wget, https://www.gnu.org/software/wget/
+  - jq # jq, https://stedolan.github.io/jq/
+  - yq # yq, https://github.com/mikefarah/yq
+  - vim # VIM, https://www.vim.org/
+  - fzf # A command-line fuzzy finder, https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
+  - github/gh/gh # Github CLI, https://github.com/cli/cli
+  - coreutils # https://www.gnu.org/software/coreutils/
+  - watch # Executes a program periodically, showing output fullscreen, https://gitlab.com/procps-ng/procps
+  - tree # Display directories as trees, http://mama.indstate.edu/users/ice/tree/
+  - colima # docker engine alternative, https://github.com/abiosoft/colima/blob/main/README.md
+
+homebrew_uninstalled_packages: []

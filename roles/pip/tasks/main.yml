@@ -1,0 +1,11 @@
+
+- name: Ensure PIP packages are installed for MacOSX.
+  pip:
+    name: "{{ item.name | default(item) }}"
+    version: "{{ item.version | default(omit) }}"
+    virtualenv: "{{ item.virtualenv | default(omit) }}"
+    executable: "{{ item.pip_executalbe | default('pip') }}"
+    extra_args: "{{ item.extra_args | default(omit) }}"
+    state: "{{ item.state | default(omit) }}"
+  loop: "{{ pip_install_packages }}"
+  when: ansible_facts['distribution'] == "MacOSX"

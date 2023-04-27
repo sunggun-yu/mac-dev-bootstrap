@@ -1,0 +1,10 @@
+---
+homebrew_taps: []
+
+homebrew_upgrade_all_packages: no
+
+homebrew_installed_packages:
+  - awscli
+  - aws-iam-authenticator
+
+homebrew_uninstalled_packages: []

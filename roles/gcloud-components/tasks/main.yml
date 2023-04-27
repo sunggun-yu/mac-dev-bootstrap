@@ -1,0 +1,10 @@
+- name: Install gcloud coomponents
+  ansible.builtin.command:
+    cmd: |
+      gcloud components install --quiet {{ gcloud_components | join(' ') }}
+  register: result
+  changed_when: '"All components are up to date" not in result.stderr'
+  when: gcloud_components is defined and (gcloud_components | length > 0)
+- ansible.builtin.debug:
+    var: result.stderr_lines
+  when: gcloud_components is defined and (gcloud_components | length > 0)

@@ -1,0 +1,64 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: true # should be true if not it fails
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+      when: ansible_facts['distribution'] == "MacOSX"
+
+# Ensure installing Homebrew Packages
+- hosts: all
+  serial: 1
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Print the brew packages to be installed
+      ansible.builtin.debug:
+        msg: Brew Package {{ homebrew_installed_packages }} will be installed
+      when: homebrew_installed_packages is defined
+      tags: ['brew']
+    - name: Install Homebrew Packages
+      import_role:
+        name: geerlingguy.mac.homebrew
+      vars:
+        # set variable for cask empty to separate the brew and cask installation
+        homebrew_cask_apps: []
+        homebrew_cask_uninstalled_apps: []
+      tags: ['brew']
+
+# Ensure installing Homebrew Cask Packages - cask sometimes takes too much to wait when I only want to apply brew pkg changes only
+- hosts: all
+  serial: 1
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Print the brew packages to be installed
+      ansible.builtin.debug:
+        msg: Brew Cask Package {{ homebrew_cask_apps }} will be installed
+      tags: ['cask']
+    - name: Install Homebrew Cask Packages
+      import_role:
+        name: geerlingguy.mac.homebrew
+      vars:
+        homebrew_installed_packages: [] # set homebrew_installed_packages empty to separate the brew and cask installation
+      tags: ['cask']
+
+# Ensure other package installation such as, NPM, PIP, and so on
+- hosts: all
+  serial: 1
+  connection: local
+  gather_facts: false
+  roles:
+    - role: npm
+      tags: ["npm"]
+    - role: pip
+      tags: ["pip"]
+
+# `gcloud` goal specific task
+- hosts: gcloud
+  serial: 1
+  connection: local
+  gather_facts: false
+  roles:
+    - role: gcloud-components
+      tags: [components]

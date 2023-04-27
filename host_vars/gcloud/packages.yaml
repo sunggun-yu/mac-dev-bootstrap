@@ -1,0 +1,8 @@
+# gcloud goal variable - single file pattern
+
+homebrew_cask_apps:
+  - google-cloud-sdk
+
+gcloud_components:
+  - beta
+  - gke-gcloud-auth-plugin

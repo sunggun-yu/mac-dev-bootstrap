@@ -1,0 +1,7 @@
+---
+homebrew_cask_appdir: /Applications
+
+homebrew_cask_apps:
+  - rancher # Rancher Desktop for docker alternative, https://rancherdesktop.io/
+
+homebrew_cask_uninstalled_apps: []

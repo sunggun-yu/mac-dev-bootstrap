@@ -1,0 +1,13 @@
+homebrew_taps:
+  - spring-io/tap
+
+homebrew_upgrade_all_packages: no
+
+homebrew_installed_packages:
+  - openjdk
+  - openjdk@11
+  - maven
+  - gradle
+  - spring-io/tap/spring-boot
+
+homebrew_uninstalled_packages: []

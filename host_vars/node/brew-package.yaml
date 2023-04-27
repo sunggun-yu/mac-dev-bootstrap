@@ -1,0 +1,11 @@
+---
+homebrew_taps: []
+
+homebrew_upgrade_all_packages: no
+
+homebrew_installed_packages:
+  - node
+  - nvm
+  - yarn
+
+homebrew_uninstalled_packages: []

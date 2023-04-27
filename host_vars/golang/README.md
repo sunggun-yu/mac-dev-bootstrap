@@ -1,0 +1,16 @@
+# golang
+
+- [Application List](#application-list)
+  - [Brew](#brew)
+
+## Application List
+
+### Brew
+
+- `go`: Golang, <https://go.dev/>
+- `goreleaser/tap/goreleaser`: Deliver Go binaries as fast and easily as possible, <https://goreleaser.com/>
+- `gotests`: Automatically generate Go test boilerplate from your source code, <https://github.com/cweill/gotests>
+- `gopls`: Language server for the Go language, <https://github.com/golang/tools/tree/master/gopls>
+- `delve`: Debugger for the Go programming language, <https://github.com/go-delve/delve>
+- `staticcheck`: State of the art linter for the Go programming language, <https://staticcheck.io/>
+- `protobuf`: Protocol Buffers - Google's data interchange format, <https://github.com/protocolbuffers/protobuf/>
