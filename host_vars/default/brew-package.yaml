@@ -10,7 +10,7 @@ homebrew_installed_packages:
   - yq # yq, https://github.com/mikefarah/yq
   - vim # VIM, https://www.vim.org/
   - fzf # A command-line fuzzy finder, https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
-  - github/gh/gh # Github CLI, https://github.com/cli/cli
+  - gh # Github CLI, https://github.com/cli/cli
   - coreutils # https://www.gnu.org/software/coreutils/
   - watch # Executes a program periodically, showing output fullscreen, https://gitlab.com/procps-ng/procps
   - tree # Display directories as trees, http://mama.indstate.edu/users/ice/tree/
