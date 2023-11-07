@@ -13,5 +13,7 @@ homebrew_installed_packages:
   - kubeseal
   - dive
   - k9s
+  - minikube
+  - helm/tap/chart-releaser
 
 homebrew_uninstalled_packages: []
