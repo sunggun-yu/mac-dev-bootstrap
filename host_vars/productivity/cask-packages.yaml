@@ -1,0 +1,9 @@
+---
+homebrew_cask_appdir: /Applications
+
+homebrew_cask_apps:
+- maccy # Clipboard manager, https://github.com/p0deje/Maccy
+- rectangle # Move and resize windows on macOS with keyboard shortcuts and snap areas, https://github.com/rxhanson/Rectangle
+- drawio # Draw diagrams free. https://www.diagrams.net/
+
+homebrew_cask_uninstalled_apps: []

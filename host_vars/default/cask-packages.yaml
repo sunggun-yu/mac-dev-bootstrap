@@ -2,8 +2,9 @@
 homebrew_cask_appdir: /Applications
 
 homebrew_cask_apps:
-  - visual-studio-code # Microsoft Visual Studio Code, https://code.visualstudio.com/
-  - iterm2 # Terminal emulator as alternative to Apple's Terminal app, https://www.iterm2.com/
-  - rancher # Rancher Desktop for docker alternative, https://rancherdesktop.io/
+- visual-studio-code # Microsoft Visual Studio Code, https://code.visualstudio.com/
+- iterm2 # Terminal emulator as alternative to Apple's Terminal app, https://www.iterm2.com/
+- font-dejavu-sans-mono-nerd-font # nerd font dejavu sans mono. https://www.nerdfonts.com/
+- font-inconsolata-nerd-font # nerd font inconsolata. https://www.nerdfonts.com/
 
 homebrew_cask_uninstalled_apps: []

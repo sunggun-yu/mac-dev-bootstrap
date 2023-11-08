@@ -3,7 +3,6 @@
 - [Application List](#application-list)
   - [Brew](#brew)
   - [Brew Cask](#brew-cask)
-  - [MAS(Mac App Store)](#masmac-app-store)
   - [NPM](#npm)
   - [PIP](#pip)
 
@@ -11,28 +10,40 @@
 
 ### Brew
 
-- `git`: git, <https://git-scm.com>
-- `wget`: wget, <https://www.gnu.org/software/wget/>
-- `jq`: jq, <https://stedolan.github.io/jq/>
-- `yq`: yq, <https://github.com/mikefarah/yq>
-- `vim`: VIM, <https://www.vim.org/>
-- `fzf`: A command-line fuzzy finder, <https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew>
-- `github/gh/gh`: Github CLI, <https://github.com/cli/cli>
-- `coreutils`: <https://www.gnu.org/software/coreutils/>
-- `watch`: Executes a program periodically, showing output fullscreen, <https://gitlab.com/procps-ng/procps>
-- `tree`: Display directories as trees, <http://mama.indstate.edu/users/ice/tree/>
-- `colima`: docker engine alternative, Container runtimes on MacOS (and Linux) with minimal setup, <https://github.com/abiosoft/colima/blob/main/README.md>
-- `node`: Nodejs, <https://nodejs.org/>
+- `git`: git. <https://git-scm.com>
+- `wget`: wget. <https://www.gnu.org/software/wget/>
+- `jq`: jq. <https://stedolan.github.io/jq/>
+- `yq`: yq. <https://github.com/mikefarah/yq>
+- `vim`: VIM. <https://www.vim.org/>
+- `fzf`: A command-line fuzzy finder. <https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew>
+- `openssl@3`: Cryptography and SSL/TLS Toolkit. <https://openssl.org/>
+- `gh`: Github CLI. <https://github.com/cli/cli>
+- `coreutils`: GNU File, Shell, and Text utilities. <https://www.gnu.org/software/coreutils/>
+- `watch`: Executes a program periodically, showing output fullscreen. <https://gitlab.com/procps-ng/procps>
+- `tree`: Display directories as trees. <http://mama.indstate.edu/users/ice/tree/>
+- `iproute2mac`: CLI wrapper for basic network utilities on macOS - ip command. <https://github.com/brona/iproute2mac>
+- `tmux`: Terminal multiplexer. <https://tmux.github.io/>
+- `nmap`: Port scanning utility for large networks. <https://nmap.org/>
+- `telnet`: User interface to the TELNET protocol
+- `gnupg`: GNU Pretty Good Privacy (PGP) package. <https://gnupg.org/>
+- `pidof`: Display the PID number for a given process name. <http://www.nightproductions.net/cli.htm>
+- `gnu-sed`: GNU implementation of the famous stream editor. <https://www.gnu.org/software/sed/>
+- `gnu-time`: <https://www.gnu.org/software/time/>, better formatting for time
+- `bash`: Bash. <https://www.gnu.org/software/bash/>
+- `htop`: htop for MacOS. <https://htop.dev/>
+- `rsync`: Utility that provides fast incremental file transfer. <https://rsync.samba.org/>
+- `git-lfs`: Large file storage for git. <https://git-lfs.github.com/>
+- `sunggun-yu/tap/envp`: shell wrapper that sets environment variables by profile
+- `ipcalc`: Calculate various network masks, etc. from a given IP address. <http://jodies.de/ipcalc>
+- `mas`: Mac App Store command line interface
+- `pre-commit`: Framework for managing multi-language pre-commit hooks. <https://pre-commit.com/>
 
 ### Brew Cask
 
 - `visual-studio-code`: Microsoft Visual Studio Code, <https://code.visualstudio.com/>
 - `iterm2`: Terminal emulator as alternative to Apple's Terminal app, <https://www.iterm2.com/>
-- `rancher`: Rancher Desktop for docker alternative, <https://rancherdesktop.io/>
-
-### MAS(Mac App Store)
-
-- `xcode`: Xcode, <https://apps.apple.com/us/app/xcode/id497799835>
+- `font-dejavu-sans-mono-nerd-font`: nerd font dejavu sans mono. <https://www.nerdfonts.com/>
+- `font-inconsolata-nerd-font`: nerd font inconsolata. <https://www.nerdfonts.com/>
 
 ### NPM
 

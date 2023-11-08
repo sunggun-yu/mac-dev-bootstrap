@@ -1,0 +1,25 @@
+---
+homebrew_taps: []
+
+homebrew_upgrade_all_packages: no
+
+homebrew_installed_packages:
+- node # Nodejs
+- nvm # Manage multiple Node.js versions. https://github.com/nvm-sh/nvm
+- yarn # JavaScript package manager. https://yarnpkg.com/
+- circleci # CircleCI cli. https://circleci.com/docs/2.0/local-cli/
+- skaffold # https://skaffold.dev/
+- bazel # Google's own build tool. https://bazel.build/
+- podman # Tool for managing OCI containers and pods .https://podman.io/
+- lima # Linux virtual machines. https://github.com/lima-vm/lima
+- buildpacks/tap/pack # CNCF buildpacks. https://buildpacks.io/
+- maven # Java Maven. https://maven.apache.org/
+- groovy # Java-based scripting language. https://www.groovy-lang.org/
+- gradle # Open-source build automation tool based on the Groovy and Kotlin DSL. https://www.gradle.org/
+- pyenv # Python version management. https://github.com/pyenv/pyenv
+- pipenv # Python dependency management tool. https://github.com/pypa/pipenv
+- openjdk
+- openjdk@11
+- cosign # https://docs.sigstore.dev/cosign/installation
+
+homebrew_uninstalled_packages: []

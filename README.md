@@ -41,11 +41,14 @@ setup and package installation.
 
 - [`default`](./host_vars/default/README.md)
 - [`aws`](./host_vars/aws/README.md)
+- [`cicd`](./host_vars/cicd/README.md)
+- [`docker`](./host_vars/docker/README.md)
 - [`gcloud`](./host_vars/gcloud/README.md)
 - [`golang`](./host_vars/golang/README.md)
 - [`java`](./host_vars/java/README.md)
 - [`k8s`](./host_vars/k8s/README.md)
 - [`node`](./host_vars/node/README.md)
+- [`productivity`](./host_vars/productivity/README.md)
 - [`team-devops`](./host_vars/team-devops/README.md)
 
 ## Supported Package managers

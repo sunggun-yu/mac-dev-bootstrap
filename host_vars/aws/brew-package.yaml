@@ -1,10 +1,13 @@
 ---
-homebrew_taps: []
+homebrew_taps:
+  - aetna-digital-infrastructure/tap
 
 homebrew_upgrade_all_packages: no
 
 homebrew_installed_packages:
-  - awscli
-  - aws-iam-authenticator
+- awscli # Official Amazon AWS command-line interface. https://aws.amazon.com/cli/
+- aws-iam-authenticator # Use AWS IAM credentials to authenticate to Kubernetes. https://github.com/kubernetes-sigs/aws-iam-authenticator
+- aetna-digital-infrastructure/tap/onelogin-aws # Onelogin AWS CLI. https://github.com/aetna-digital-infrastructure/dfp-cli-onelogin-aws
+- eksctl # Simple command-line tool for creating clusters on Amazon EKS. https://eksctl.io
 
 homebrew_uninstalled_packages: []
