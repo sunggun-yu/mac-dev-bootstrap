@@ -37,12 +37,14 @@
 - `ipcalc`: Calculate various network masks, etc. from a given IP address. <http://jodies.de/ipcalc>
 - `mas`: Mac App Store command line interface
 - `pre-commit`: Framework for managing multi-language pre-commit hooks. <https://pre-commit.com/>
+- `awk`: Text processing scripting language. <https://www.cs.princeton.edu/~bwk/btl.mirror/>
 
 ### Brew Cask
 
 - `git-credential-manager`: Cross-platform Git credential storage for multiple hosting providers, <https://aka.ms/gcm>
 - `visual-studio-code`: Microsoft Visual Studio Code, <https://code.visualstudio.com/>
 - `iterm2`: Terminal emulator as alternative to Apple's Terminal app, <https://www.iterm2.com/>
+- `sublime-text`: Text editor for code, markup and prose. <https://www.sublimetext.com/>
 - `font-dejavu-sans-mono-nerd-font`: nerd font dejavu sans mono. <https://www.nerdfonts.com/>
 - `font-inconsolata-nerd-font`: nerd font inconsolata. <https://www.nerdfonts.com/>
 
