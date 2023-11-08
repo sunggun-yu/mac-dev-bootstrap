@@ -40,6 +40,7 @@
 
 ### Brew Cask
 
+- `git-credential-manager`: Cross-platform Git credential storage for multiple hosting providers, <https://aka.ms/gcm>
 - `visual-studio-code`: Microsoft Visual Studio Code, <https://code.visualstudio.com/>
 - `iterm2`: Terminal emulator as alternative to Apple's Terminal app, <https://www.iterm2.com/>
 - `font-dejavu-sans-mono-nerd-font`: nerd font dejavu sans mono. <https://www.nerdfonts.com/>
