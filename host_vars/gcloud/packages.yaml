@@ -1,4 +1,5 @@
 # gcloud goal variable - single file pattern
+homebrew_cask_accept_external_apps: true
 
 homebrew_cask_apps:
 - google-cloud-sdk # Set of tools to manage resources and applications hosted on Google Cloud. https://cloud.google.com/sdk/

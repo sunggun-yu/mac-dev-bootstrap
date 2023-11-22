@@ -1,7 +1,10 @@
-# set the comma separated inventory. set empty string with `,$(goals)` to avoid host file not found error when receive single host(goal)
+# set the comma separated inventory.
 # goal must be comma separated for multiple goal
-ifneq ($(goals),)
-	INVENTORY:=-i ,$(goals)
+# if goals is empty, it runs only default goal (host)
+ifeq ($(goals),)
+	INVENTORY:=--limit default
+else
+	INVENTORY:=--limit $(goals)
 endif
 
 # set tag. tag value must be comma separated
