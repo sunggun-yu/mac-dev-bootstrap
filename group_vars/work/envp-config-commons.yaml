@@ -1,0 +1,2 @@
+envp_config_commons:
+  work: "{{ lookup('file', '{{playbook_dir}}/files/work-envp/common-work.yaml') }}"

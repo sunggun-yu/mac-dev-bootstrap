@@ -1,0 +1,38 @@
+commons-meowhq-gke:
+  https-proxy: &commons-meowhq-gke-https-proxy
+    name: HTTPS_PROXY
+    value: http://$(cat ~/.kube/meowhq-gke-k8s-proxies/${PROJECT_ID}_${CLUSTER_NAME}):443
+  no-proxy: &commons-meowhq-gke-no-proxy
+    name: NO_PROXY
+    value: localhost,127.0.0.1,.googleapis.com,.amazonaws.com
+  kubeconfig: &commons-meowhq-gke-kubeconfig
+    name: KUBECONFIG
+    value: $HOME/.kube/meowhq-gke-$PROJECT_ID_$CLUSTER_NAME
+  env-init:
+    login-gcp: &commons-meowhq-gke-env-init-login-gcp |
+      # Check if gcloud is already authenticated
+      if gcloud auth list | grep -q 'ACTIVE'; then
+          echo "already authenticated gcloud."
+      else
+          echo "not authenticated gcloud. Initiating login..."
+          gcloud auth login
+      fi
+    kubeconfig: &commons-meowhq-gke-env-init-kubeconfig |
+      # configure kubeconfig
+      gcloud container clusters get-credentials $CLUSTER_NAME --region $REGION --project $PROJECT_ID
+    k8s-api-proxy: &commons-meowhq-gke-env-init-k8s-api-proxy |
+      # configure k8s-api-proxy
+      echo "retrieving k8s-api-proxy ..."
+      # echo "project id: ${PROJECT_ID}"
+      # echo "cluster name: ${CLUSTER_NAME}"
+      mkdir -p ~/.kube/meowhq-gke-k8s-proxies
+      proxy_subnetwork=$(gcloud container clusters describe $CLUSTER_NAME --project $PROJECT_ID --region $REGION --format=json | jq -r ".subnetwork")
+      echo "proxy subnetwork: $proxy_subnetwork"
+      proxy_ip=$(gcloud compute forwarding-rules list \
+        --regions=$REGION --project=$PROJECT_ID \
+        --filter="subnetwork: $proxy_subnetwork AND description: api-proxy/k8s-api-proxy" \
+        --sort-by=~creationTimestamp --limit=1 --format json | jq -r ".[0].IPAddress"
+      )
+      echo "proxy ip: $proxy_ip"
+      echo $proxy_ip > $HOME/.kube/meowhq-gke-k8s-proxies/${PROJECT_ID}_${CLUSTER_NAME}
+      echo $HTTPS_PROXY

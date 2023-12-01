@@ -65,3 +65,12 @@
   roles:
     - role: gcloud-components
       tags: [components]
+
+# envp
+- hosts: envp
+  serial: 1
+  connection: local
+  gather_facts: false
+  roles:
+    - role: envp
+      tags: ["envp"]

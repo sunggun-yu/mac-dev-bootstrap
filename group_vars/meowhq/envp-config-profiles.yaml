@@ -1,0 +1,2 @@
+envp_config_profiles:
+  meowhq: "{{ lookup('file', '{{playbook_dir}}/files/meowhq-envp/profile-meowhq.yaml') }}"

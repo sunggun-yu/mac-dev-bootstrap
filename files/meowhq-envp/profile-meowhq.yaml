@@ -1,0 +1,11 @@
+meowhq:
+  desc: meowhq
+  env:
+  - name: VAULT_ADDR
+    value: $(op item get meowhq-vault --fields label=addr)
+  - name: VAULT_TOKEN
+    value: $(op item get meowhq-vault --fields label=token)
+  - name: KUBECONFIG
+    value: ~/.kube/meowhq
+  init-script:
+    - run: *commons-meowhq-env-init-login-op

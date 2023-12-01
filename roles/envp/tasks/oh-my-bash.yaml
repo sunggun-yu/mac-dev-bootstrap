@@ -1,0 +1,11 @@
+- name: Check if oh-my-bash directory is exists. consider it is installed if directory is exisiting
+  ansible.builtin.stat:
+    path: "{{ envp_ohmybash_custom_dir }}"
+  register: ohmybash_dir
+
+- name: Copy oh-my-bash custom config and themes for ENVP prompt
+  when: ohmybash_dir.stat.exists
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/oh-my-bash/custom/"
+    dest: "{{ envp_ohmybash_custom_dir }}"
+    backup: false

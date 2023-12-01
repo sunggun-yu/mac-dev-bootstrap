@@ -1,0 +1,11 @@
+- name: Check if oh-my-zsh directory is exists. consider it is installed if directory is exisiting
+  ansible.builtin.stat:
+    path: "{{ envp_ohmybash_custom_dir }}"
+  register: ohmyzsh_dir
+
+- name: Copy oh-my-zsh custom config and themes for ENVP prompt
+  when: ohmyzsh_dir.stat.exists
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/oh-my-zsh/custom/"
+    dest: "{{ envp_ohmyzsh_custom_dir }}"
+    backup: false

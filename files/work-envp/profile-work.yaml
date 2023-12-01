@@ -1,0 +1,7 @@
+work:
+  desc: work for testing
+  env:
+  - name: SOMETHING
+    value: hello
+  init-script:
+    - run: *commons-work-env-init-login-something

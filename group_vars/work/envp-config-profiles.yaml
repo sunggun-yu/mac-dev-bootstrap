@@ -1,0 +1,2 @@
+envp_config_profiles:
+  work: "{{ lookup('file', '{{playbook_dir}}/files/work-envp/profile-work.yaml') }}"

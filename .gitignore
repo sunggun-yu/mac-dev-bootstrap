@@ -36,6 +36,7 @@ packer/build
 !**/roles/gem
 !**/roles/snap
 !**/roles/gcloud-components
+!**/roles/envp
 
 # Terraform
 .terraform

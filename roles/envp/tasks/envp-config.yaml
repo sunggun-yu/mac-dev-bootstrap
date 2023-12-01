@@ -1,0 +1,43 @@
+- name: Create a envp config directory if it does not exist
+  ansible.builtin.file:
+    path: "{{ envp_config_file | dirname}}"
+    recurse: true
+
+- name: Replace empty object of profiles in a config file
+  ansible.builtin.lineinfile:
+    path: '{{ envp_config_file }}'
+    state: present
+    regexp: 'profiles: {}'
+    line: 'profiles:'
+
+- name: Check if the envp config file exists
+  stat:
+    path: "{{ envp_config_file }}"
+  register: file_status
+
+- name: Create configuration file from template if not existing
+  template:
+    src: "{{ role_path }}/templates/config.yaml.j2"
+    dest: "{{ envp_config_file }}"
+  when: file_status.stat.exists == False
+
+- name: Insert Commons
+  blockinfile:
+    path: "{{ envp_config_file }}"
+    block: "{{ item.value }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - commons.{{ item.key }}"
+    insertafter: "default:.*"
+    backup: true
+    state: present
+  with_dict: "{{ envp_config_commons }}"
+
+- name: Insert Profiles
+  blockinfile:
+    path: "{{ envp_config_file }}"
+    block: |2-
+        {{ item.value | indent(2) }}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - profiles.{{ item.key }}"
+    insertafter: "profiles:"
+    backup: true
+    state: present
+  with_dict: "{{ envp_config_profiles }}"

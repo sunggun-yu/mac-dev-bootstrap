@@ -1,0 +1,11 @@
+envp_config_file: "$HOME/.config/envp/config.yaml"
+
+envp_config_profiles: {}
+
+envp_config_commons: {}
+
+envp_starship_config_file: "~/.config/starship.toml"
+
+envp_ohmyzsh_custom_dir: "~/.oh-my-zsh/custom"
+
+envp_ohmybash_custom_dir: "~/.oh-my-bash/custom"

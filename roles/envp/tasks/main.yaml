@@ -1,0 +1,11 @@
+- name: Configure ENVP
+  ansible.builtin.import_tasks: envp-config.yaml
+
+- name: Configure oh-my-zsh
+  ansible.builtin.import_tasks: oh-my-zsh.yaml
+
+- name: Configure starship prompt
+  ansible.builtin.import_tasks: starship.yaml
+
+- name: Configure oh-my-bash custom config
+  ansible.builtin.import_tasks: oh-my-bash.yaml

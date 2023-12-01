@@ -1,0 +1,8 @@
+- name: Apply starship shell config for ENVP Prompt
+  blockinfile:
+    path: "{{ envp_starship_config_file }}"
+    block: "{{ lookup('file', '{{ role_path }}/files/starship/envp.toml') }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - envp"
+    create: true
+    backup: true
+    state: present

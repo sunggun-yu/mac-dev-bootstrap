@@ -1,0 +1,3 @@
+envp_config_commons:
+  meowhq: "{{ lookup('file', '{{playbook_dir}}/files/meowhq-envp/common-meowhq.yaml') }}"
+  meowhq-gke: "{{ lookup('file', '{{playbook_dir}}/files/meowhq-envp/common-meowhq-gke.yaml') }}"

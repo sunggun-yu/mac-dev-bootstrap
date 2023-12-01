@@ -1,0 +1,5 @@
+commons-meowhq:
+  env-init:
+    login-op: &commons-meowhq-env-init-login-op |
+      # Check if gcloud is already authenticated
+      op signin
