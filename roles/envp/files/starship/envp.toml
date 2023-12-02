@@ -1,6 +1,6 @@
 [custom.envp]
 command = "echo $ENVP_PROFILE" # shows output of command
 when = """ test "$ENVP_PROFILE" != "" """
-symbol = ''
+symbol = "  "
 style = 'bold green'
-format = "[🍱 $output]($style) "
+format = "[$symbol$output]($style) "

@@ -560,7 +560,7 @@ function prompt_emacsdir {
 # prompt the envp profile
 function prompt_envp {
   if [[ -n "$ENVP_PROFILE" ]]; then
-    prompt_segment green red "🍱 ${ENVP_PROFILE}"
+    prompt_segment cyan black "  ${ENVP_PROFILE}"
   fi
 }
 

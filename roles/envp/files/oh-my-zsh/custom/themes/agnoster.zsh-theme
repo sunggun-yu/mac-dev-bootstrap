@@ -260,7 +260,7 @@ prompt_aws() {
 # prompt the envp profile
 prompt_envp() {
   if [[ -n "$ENVP_PROFILE" ]]; then
-    prompt_segment green red "🍱 ${ENVP_PROFILE:t:gs/%/%%}"
+    prompt_segment cyan black "  ${ENVP_PROFILE:t:gs/%/%%}"
   fi
 }
 

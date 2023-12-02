@@ -2,6 +2,6 @@
 
 function envp_prompt_info() {
   if [[ -n $ENVP_PROFILE ]]; then
-    echo "%{$fg[green]%}🍱 $ENVP_PROFILE%{$reset_color%} "
+    echo "%{$fg[green]%}  $ENVP_PROFILE%{$reset_color%} "
   fi
 }
