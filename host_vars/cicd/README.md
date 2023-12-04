@@ -25,6 +25,7 @@
 - `openjdk`: OpenJDK
 - `openjdk@11`: OpenJDK 11
 - `cosign`: <https://docs.sigstore.dev/cosign/installation>
+- `renovate`: Automated dependency updates. Flexible so you don't need to be. <https://github.com/renovatebot/renovate>
 
 ### NPM
 
