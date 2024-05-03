@@ -11,7 +11,7 @@ homebrew_installed_packages:
 - hashicorp/tap/packer # Packer
 - hashicorp/tap/terraform # Terraform
 - tflint # Linter for Terraform files. https://github.com/terraform-linters/tflint
-- tfenv # Terraform version manager. https://github.com/tfutils/tfenv
+- { name: tfenv, install_options: "force" } # Terraform version manager. https://github.com/tfutils/tfenv
 - opa # Open Policy Agent. https://www.openpolicyagent.org
 - conftest # Conftest for OPA testing. https://www.conftest.dev/install/
 - snyk/tap/snyk # Snyk cli
