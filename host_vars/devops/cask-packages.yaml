@@ -1,0 +1,6 @@
+---
+homebrew_cask_appdir: /Applications
+
+homebrew_cask_apps: []
+
+homebrew_cask_uninstalled_apps: []
