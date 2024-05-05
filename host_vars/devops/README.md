@@ -28,7 +28,7 @@
 
 ### Brew Cask
 
-- n/a
+- `ngrok`: Secure introspectable tunnels to localhost. <https://ngrok.com/>
 
 ### NPM
 

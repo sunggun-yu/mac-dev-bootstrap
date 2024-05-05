@@ -1,0 +1,11 @@
+---
+homebrew_taps:
+- homebrew/cask-fonts
+
+homebrew_cask_appdir: /Applications
+
+homebrew_cask_accept_external_apps: true
+
+homebrew_cask_apps: []
+
+homebrew_cask_uninstalled_apps: []

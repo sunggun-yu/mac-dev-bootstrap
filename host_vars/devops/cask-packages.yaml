@@ -1,6 +1,7 @@
 ---
 homebrew_cask_appdir: /Applications
 
-homebrew_cask_apps: []
+homebrew_cask_apps:
+- ngrok # Secure introspectable tunnels to localhost. https://ngrok.com/
 
 homebrew_cask_uninstalled_apps: []
