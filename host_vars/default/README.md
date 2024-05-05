@@ -39,6 +39,8 @@
 - `pre-commit`: Framework for managing multi-language pre-commit hooks. <https://pre-commit.com/>
 - `awk`: Text processing scripting language. <https://www.cs.princeton.edu/~bwk/btl.mirror/>
 - `neofetch`: Fast, highly customizable system info script. <https://github.com/dylanaraps/neofetch>
+- `wrk`: Modern HTTP benchmarking tool. <https://github.com/wg/wrk>
+- `step`: `Crypto and x509 Swiss-Army-Knife. <https://github.com/smallstep/cli>
 
 ### Brew Cask
 
