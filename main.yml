@@ -80,6 +80,9 @@
   serial: 1
   connection: local
   gather_facts: false
+  module_defaults:
+    ansible.builtin.get_url:
+      validate_certs: false
   roles:
     - role: starship
       tags: ["starship", "zsh"]
