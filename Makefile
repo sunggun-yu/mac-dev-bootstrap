@@ -40,7 +40,7 @@ ANSIBLE_GALAXY ?= ansible-galaxy
 # Ensure Python VENV is created and can be activated
 .PHONY: python-venv
 python-venv: $(VENV)
-	@python3 -m venv --python=python3.12 $(VENV)
+	@python3 -m venv $(VENV)
 	@$(ACTIVATE_VENV) && which python3
 
 # Ensure Ansible is installed
