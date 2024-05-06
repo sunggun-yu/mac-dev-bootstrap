@@ -30,6 +30,9 @@ $(VENV):
 # command for Activating the VENV in the Makefile
 ACTIVATE_VENV = . $(VENV)/bin/activate 
 
+# Tool Versions
+ANSIBLE_VERSION ?= 9.5.1
+
 ## Tool Binaries
 ANSIBLE_PLAYBOOK ?= ansible-playbook
 ANSIBLE_GALAXY ?= ansible-galaxy
@@ -44,4 +47,4 @@ python-venv: $(VENV)
 # Installation is done using Python VENV in the project directory `.venv` in order to ensure that Ansible is running any user environment
 .PHONY: ansible-install
 ansible-install: python-venv
-	@$(ACTIVATE_VENV) && python3 -m pip install ansible
+	@$(ACTIVATE_VENV) && python3 -m pip install ansible==$(ANSIBLE_VERSION)
