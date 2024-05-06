@@ -3,5 +3,7 @@ homebrew_cask_appdir: /Applications
 
 homebrew_cask_apps:
 - ngrok # Secure introspectable tunnels to localhost. https://ngrok.com/
+- postman # API development environment. https://www.postman.com/
+- insomnia # Cross-platform REST client. https://insomnia.rest/
 
 homebrew_cask_uninstalled_apps: []

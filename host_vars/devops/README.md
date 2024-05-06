@@ -29,6 +29,9 @@
 ### Brew Cask
 
 - `ngrok`: Secure introspectable tunnels to localhost. <https://ngrok.com/>
+- `obs`: Free and open-source software for screen recording and live streaming. <https://obsproject.com/>
+- `postman`: API development environment. <https://www.postman.com/>
+- `insomnia`: Cross-platform REST client. <https://insomnia.rest/>
 
 ### NPM
 
