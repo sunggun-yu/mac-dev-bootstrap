@@ -1,0 +1,24 @@
+---
+- name: Create zsh completions directory
+  become: false
+  file:
+    path: ~/.oh-my-zsh/completions
+    state: directory
+    mode: "755"
+  tags: ["zsh-config"]
+
+- name: Install kubectx completion for zsh
+  become: false
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubectx.zsh
+    dest: ~/.oh-my-zsh/completions/kubectx.zsh
+    mode: +x
+  tags: ["zsh-config"]
+
+- name: Install kubens completion for zsh
+  become: false
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubens.zsh
+    dest: ~/.oh-my-zsh/completions/kubens.zsh
+    mode: +x
+  tags: ["zsh-config"]

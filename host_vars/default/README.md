@@ -15,6 +15,7 @@
 - `jq`: jq. <https://stedolan.github.io/jq/>
 - `yq`: yq. <https://github.com/mikefarah/yq>
 - `vim`: VIM. <https://www.vim.org/>
+- `zsh`: Zsh. <https://www.zsh.org/>
 - `fzf`: A command-line fuzzy finder. <https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew>
 - `openssl@3`: Cryptography and SSL/TLS Toolkit. <https://openssl.org/>
 - `gh`: Github CLI. <https://github.com/cli/cli>

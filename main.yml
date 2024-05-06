@@ -74,3 +74,14 @@
   roles:
     - role: envp
       tags: ["envp"]
+
+# zsh
+- hosts: default
+  serial: 1
+  connection: local
+  gather_facts: false
+  roles:
+    - role: starship
+      tags: ["starship", "zsh"]
+    - role: zsh
+      tags: ["zsh"]

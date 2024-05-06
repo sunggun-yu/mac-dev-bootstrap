@@ -3,13 +3,6 @@
     path: "{{ envp_config_file | dirname}}"
     recurse: true
 
-- name: Replace empty object of profiles in a config file
-  ansible.builtin.lineinfile:
-    path: '{{ envp_config_file }}'
-    state: present
-    regexp: 'profiles: {}'
-    line: 'profiles:'
-
 - name: Check if the envp config file exists
   stat:
     path: "{{ envp_config_file }}"
@@ -19,7 +12,15 @@
   template:
     src: "{{ role_path }}/templates/config.yaml.j2"
     dest: "{{ envp_config_file }}"
-  when: file_status.stat.exists == False
+  when: file_status.stat.exists == false or file_status.stat.size == 0
+
+- name: Replace empty object of profiles in a config file
+  ansible.builtin.lineinfile:
+    path: '{{ envp_config_file }}'
+    state: present
+    regexp: 'profiles: {}'
+    line: 'profiles:'
+  when: file_status.stat.exists == true
 
 - name: Insert Commons
   blockinfile:

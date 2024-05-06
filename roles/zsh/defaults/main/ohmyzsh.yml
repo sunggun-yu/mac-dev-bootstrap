@@ -1,0 +1,9 @@
+
+ohmyzsh_theme: robbyrussell
+ohmyzsh_plugins:
+  - fzf
+  - gcloud
+  - git
+  - kubectl
+  - kubectx
+  - starship

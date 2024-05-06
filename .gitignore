@@ -37,6 +37,8 @@ packer/build
 !**/roles/snap
 !**/roles/gcloud-components
 !**/roles/envp
+!**/roles/starship
+!**/roles/zsh
 
 # Terraform
 .terraform

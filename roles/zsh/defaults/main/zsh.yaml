@@ -1,0 +1,22 @@
+zsh_file: $HOME/.zshrc
+
+zsh_paths:
+- $HOME/Library/Python/3.8/bin
+- /opt/homebrew/bin
+
+zsh_aliases:
+  - { "egrep" : "egrep --color=auto" }
+  - {"k" : "kubectl"}
+
+zsh_bindkeys:
+  - { "^U" : "backward-kill-line" }
+
+zsh_misc: |
+  autoload -U compinit && compinit
+
+  export PATH=$PATH:$HOME/go/bin
+  export GO111MODULE=on
+  export GOPROXY=direct
+  export GOSUMDB=off
+  export LPASS_AGENT_TIMEOUT=0
+  export KUBE_EDITOR="/opt/homebrew/bin/subl -w"

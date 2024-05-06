@@ -1,0 +1,85 @@
+---
+- name: Download oh-my-zsh install script
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    dest: /tmp/oh-my-zsh.sh
+    mode: 0750
+
+- name: install oh-my-zsh
+  ansible.builtin.shell: "/tmp/oh-my-zsh.sh"
+  args:
+    creates: ~/.oh-my-zsh
+
+- name: Check if .zshrc file exists
+  stat:
+    path: "{{ zsh_file }}"
+  register: file_status
+
+- name: Write default .zhsrc file
+  ansible.builtin.template:
+    src: .zshrc.j2
+    dest: "{{ zsh_file }}"
+    backup: yes
+  when: file_status.stat.exists == False
+
+- name: ensure path
+  ansible.builtin.blockinfile:
+    path: "{{ zsh_file }}"
+    block: |
+      {% for i in zsh_paths %}
+      export PATH="$PATH:{{ i }}"
+      {% endfor %}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - path"
+    prepend_newline: yes
+    backup: yes
+    state: present
+
+- name: ensure ohmyzsh config
+  ansible.builtin.blockinfile:
+    path: "{{ zsh_file }}"
+    block: |
+      export ZSH="$HOME/.oh-my-zsh"
+      ZSH_THEME="{{ ohmyzsh_theme }}"
+      plugins=({{ ohmyzsh_plugins | join(' ')}})
+      source $ZSH/oh-my-zsh.sh
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - ohmyzsh"
+    prepend_newline: yes
+    backup: yes
+    state: present
+
+- name: ensure aliases
+  ansible.builtin.blockinfile:
+    path: "{{ zsh_file }}"
+    block: |
+      {% for i in zsh_aliases %}
+      {% for k,v in i.items() %}
+      alias {{ k }}="{{ v }}"
+      {% endfor %}
+      {% endfor %}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - aliases"
+    prepend_newline: yes
+    backup: yes
+    state: present
+
+- name: ensure bindkeys
+  ansible.builtin.blockinfile:
+    path: "{{ zsh_file }}"
+    block: |
+      {% for i in zsh_bindkeys %}
+      {% for k,v in i.items() %}
+      bindkey "{{ k }}"    {{ v }}
+      {% endfor %}
+      {% endfor %}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - bindkeys"
+    prepend_newline: yes
+    backup: yes
+    state: present
+
+- name: ensure misc
+  ansible.builtin.blockinfile:
+    path: "{{ zsh_file }}"
+    block: "{{ zsh_misc }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - misc"
+    prepend_newline: yes
+    backup: yes
+    state: present

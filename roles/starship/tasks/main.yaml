@@ -1,0 +1,40 @@
+- name: Create a envp config directory if it does not exist
+  ansible.builtin.file:
+    path: "{{ starship_config_file | dirname}}"
+    recurse: true
+
+- name: Check if starship config file exists
+  stat:
+    path: "{{ starship_config_file }}"
+  register: file_status
+
+- name: Write default starship.toml config
+  ansible.builtin.template:
+    src: starship.toml.j2
+    dest: "{{ starship_config_file }}"
+    backup: yes
+  when: file_status.stat.exists == False
+
+- name: Add Config
+  ansible.builtin.blockinfile:
+    path: "{{ starship_config_file }}"
+    block: "{{ starship_config }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - config"
+    prepend_newline: yes
+    backup: yes
+    state: present
+
+- name: Add Modules
+  ansible.builtin.blockinfile:
+    path: "{{ starship_config_file }}"
+    block: |
+      [{{ item.key }}]
+      {% for key, value in item.value.items() %}
+      {{ key }} = {% if value in [true, false, True, False] %}{{ value | lower }}{% else %}'{{ value }}'{% endif %}
+      
+      {% endfor %}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - module {{ item.key }}"
+    prepend_newline: yes
+    backup: yes
+    state: present
+  with_dict: "{{ starship_modules }}"

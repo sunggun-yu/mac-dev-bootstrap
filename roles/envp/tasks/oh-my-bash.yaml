@@ -1,4 +1,4 @@
-- name: Check if oh-my-bash directory is exists. consider it is installed if directory is existing
+- name: Check if oh-my-bash directory is exists. consider it is installed if directory is exisiting
   ansible.builtin.stat:
     path: "{{ envp_ohmybash_custom_dir }}"
   register: ohmybash_dir

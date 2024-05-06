@@ -1,0 +1,47 @@
+# {{ ansible_managed }}
+
+# If you come from bash you might have to change your $PATH.
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+
+# BEGIN ANSIBLE MANAGED BLOCK - path
+{% for i in zsh_paths %}
+export PATH="$PATH:{{ i }}"
+{% endfor %}
+# END ANSIBLE MANAGED BLOCK - path
+
+# BEGIN ANSIBLE MANAGED BLOCK - ohmyzsh
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="{{ ohmyzsh_theme }}"
+
+plugins=({{ ohmyzsh_plugins }})
+
+source $ZSH/oh-my-zsh.sh
+# END ANSIBLE MANAGED BLOCK - ohmyzsh
+
+# BEGIN ANSIBLE MANAGED BLOCK - aliases
+{% for i in zsh_aliases %}
+{% for k,v in i.items() %}
+alias {{ k }}="{{ v }}"
+{% endfor %}
+{% endfor %}
+# END ANSIBLE MANAGED BLOCK - aliases
+
+# BEGIN ANSIBLE MANAGED BLOCK - bindkeys
+{% for i in zsh_bindkeys %}
+{% for k,v in i.items() %}
+bindkeys {{ k }}="{{ v }}"
+{% endfor %}
+{% endfor %}
+# END ANSIBLE MANAGED BLOCK - bindkeys
+
+
+# BEGIN ANSIBLE MANAGED BLOCK - misc
+autoload -U compinit && compinit
+
+export PATH=$PATH:$HOME/go/bin
+export GO111MODULE=on
+export GOPROXY=direct
+export GOSUMDB=off
+export LPASS_AGENT_TIMEOUT=0
+# BEGIN ANSIBLE MANAGED BLOCK - misc

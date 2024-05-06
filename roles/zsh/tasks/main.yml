@@ -1,0 +1,6 @@
+# oh-my-zsh
+- name: Configure oh-my-zsh
+  ansible.builtin.import_tasks: ohmyzsh.yml
+
+- name: Configure oh-my-zsh
+  ansible.builtin.import_tasks: config_completion.yml
