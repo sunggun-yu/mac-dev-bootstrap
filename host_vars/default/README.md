@@ -42,6 +42,11 @@
 - `neofetch`: Fast, highly customizable system info script. <https://github.com/dylanaraps/neofetch>
 - `wrk`: Modern HTTP benchmarking tool. <https://github.com/wg/wrk>
 - `step`: `Crypto and x509 Swiss-Army-Knife. <https://github.com/smallstep/cli>
+- `bat`: A cat(1) clone with wings. <https://github.com/sharkdp/bat>
+- `fd`: Simple, fast and user-friendly alternative to find. <https://github.com/sharkdp/fd>
+- `eza`: A simple, fast and user-friendly alternative to z. <https://github.com/eza-community/eza>
+- `zoxide`: A faster way to navigate your filesystem. <https://github.com/ajeetdsouza/zoxide>
+- `midnight-commander`: Midnight Commander. <https://midnight-commander.org/>
 
 ### Brew Cask
 
