@@ -23,4 +23,5 @@ zsh_misc: |
   export KUBE_EDITOR="/opt/homebrew/bin/subl -w"
 
   # Set up zoxide
-  eval "$(zoxide init zsh)"
+  eval "$(zoxide init --cmd cd zsh)"
+
