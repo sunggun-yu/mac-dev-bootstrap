@@ -21,3 +21,6 @@ zsh_misc: |
   export GOSUMDB=off
   export LPASS_AGENT_TIMEOUT=0
   export KUBE_EDITOR="/opt/homebrew/bin/subl -w"
+
+  # Set up zoxide
+  eval "$(zoxide init zsh)"
