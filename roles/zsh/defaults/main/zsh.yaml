@@ -17,7 +17,7 @@ zsh_misc: |
 
   export PATH=$PATH:$HOME/go/bin
   export GO111MODULE=on
-  export GOPROXY=direct
+  export GOPROXY='https://proxy.golang.org,direct'
   export GOSUMDB=off
   export LPASS_AGENT_TIMEOUT=0
   export KUBE_EDITOR="/opt/homebrew/bin/subl -w"
