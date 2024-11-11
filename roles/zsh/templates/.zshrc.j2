@@ -39,7 +39,9 @@ bindkeys {{ k }}="{{ v }}"
 # BEGIN ANSIBLE MANAGED BLOCK - misc
 autoload -U compinit && compinit
 
-export PATH=$PATH:$HOME/go/bin
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH
+export PATH=$PATH:$GOBIN
 export GO111MODULE=on
 export GOPROXY='https://proxy.golang.org,direct'
 export GOSUMDB=off
