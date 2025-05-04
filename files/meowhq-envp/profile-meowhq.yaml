@@ -5,6 +5,8 @@ meowhq:
     value: $(op item get meowhq-vault --fields label=addr)
   - name: VAULT_TOKEN
     value: $(op item get meowhq-vault --fields label=token)
+  - name: SNYK_TOKEN
+    value: $(op item get snyk-sunggun-yu --fields label=SNYK_TOKEN)
   - name: KUBECONFIG
     value: ~/.kube/meowhq
   init-script:

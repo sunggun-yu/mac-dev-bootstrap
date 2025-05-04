@@ -16,6 +16,7 @@
 - `docker-completion`: Bash, Zsh and Fish completion for Docker. <https://www.docker.com/>
 - `colima`: docker engine alternative. <https://github.com/abiosoft/colima/blob/main/README.md>
 - `dive`: Tool for exploring each layer in a docker image. <https://github.com/wagoodman/dive>
+- `cri-tools`: CLI and validation tools for Kubelet Container Runtime Interface (CRI). <https://github.com/kubernetes-sigs/cri-tools>
 
 ### Brew Cask
 

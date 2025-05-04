@@ -34,6 +34,8 @@
 - `insomnia`: Cross-platform REST client. <https://insomnia.rest/>
 - `vlc`: Open-source multimedia player. <https://www.videolan.org/vlc/>
 - `vnc-viewer`: Remote desktop software. <https://www.realvnc.com/en/connect/download/viewer/>
+- `shottr`: Screenshot tool for macOS. <https://shottr.cc/>
+- `cursor`: Write, edit, and chat about your code with AI. <https://www.cursor.com/>
 
 ### NPM
 
